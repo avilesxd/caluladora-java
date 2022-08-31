@@ -6,3 +6,4 @@ opciones de:
   * Multiplicar
   * Dividir
   * Potencia
+  * Raiz cuadrada
