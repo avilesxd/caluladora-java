@@ -1,9 +1,11 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class operaciones {
     public static void main(String[] args) {
-        Scanner cs = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Scanner opciones = new Scanner(System.in);
+        boolean salir = false;
         int opcion;
         String menu = """
                 ¿Que desea hacer?
@@ -16,64 +18,82 @@ public class operaciones {
                 6.- Raiz cuadrada
                 7.- Salir
                 """;
-        System.out.println(menu);
-        System.out.println("Ingrese una opción");
-        opcion = opciones.nextInt();
-        switch (opcion){
-            case 1:
-                int num; int num2; int total;
-                System.out.println("Ingrese el primer numero");
-                num = cs.nextInt();
-                System.out.println("Ingrese el segundo numero");
-                num2 = cs.nextInt();
-                total = num + num2;
-                System.out.println("El resultado es " + total);
-                break;
-            case 2:
-                int num3; int num4; int total2;
-                System.out.println("Ingrese el primer numero");
-                num3 = cs.nextInt();
-                System.out.println("Ingrese el segundo numero");
-                num4 = cs.nextInt();
-                total2 = num3 - num4;
-                System.out.println("El resultado es " + total2);
-                break;
-            case 3:
-                int num5; int num6; int total3;
-                System.out.println("Ingrese el primer numero");
-                num5 = cs.nextInt();
-                System.out.println("Ingrese el segundo numero");
-                num6 = cs.nextInt();
-                total3 = num5 * num6;
-                System.out.println("El resultado es " + total3);
-                break;
-            case 4:
-                int num7; int num8; int total4;
-                System.out.println("Ingrese el primer numero");
-                num7 = cs.nextInt();
-                System.out.println("Ingrese el segundo numero");
-                num8 = cs.nextInt();
-                total4 = num7 / num8;
-                System.out.println("El resultado es " + total4);
-                break;
-            case 5:
-                double num9; double num10;
-                System.out.println("Ingrese el primer numero");
-                num9 = cs.nextInt();
-                System.out.println("Ingrese el segundo numero");
-                num10 = cs.nextInt();
-                double respuestaElevado = Math.pow(num9, num10);
-                System.out.println("El resultado es " + respuestaElevado);
-                break;
-            case 6:
-                double num11;
-                System.out.println("Ingrese el numero al cual desea sacar su raíz cuadrada");
-                num11 = cs.nextInt();
-                double resultado = Math.sqrt(num11);
-                System.out.println("La raíz cuadrada de " + num11 + " es " + resultado);
-                break;
-            case 7:
-                break;
+
+        while (!salir) {
+            System.out.println(menu);
+            try {
+                System.out.println("Ingrese una opción");
+                opcion = opciones.nextInt();
+                System.out.println("\n");
+                switch (opcion) {
+                    case 1 -> {
+                        int num;
+                        int num2;
+                        int total;
+                        System.out.println("Ingrese el primer número");
+                        num = sc.nextInt();
+                        System.out.println("Ingrese el segundo número");
+                        num2 = sc.nextInt();
+                        total = num + num2;
+                        System.out.println("El resultado es " + total+"\n");
+                    }
+                    case 2 -> {
+                        int num3;
+                        int num4;
+                        int total2;
+                        System.out.println("Ingrese el primer número");
+                        num3 = sc.nextInt();
+                        System.out.println("Ingrese el segundo número");
+                        num4 = sc.nextInt();
+                        total2 = num3 - num4;
+                        System.out.println("El resultado es " + total2+"\n");
+                    }
+                    case 3 -> {
+                        int num5;
+                        int num6;
+                        int total3;
+                        System.out.println("Ingrese el primer número");
+                        num5 = sc.nextInt();
+                        System.out.println("Ingrese el segundo número");
+                        num6 = sc.nextInt();
+                        total3 = num5 * num6;
+                        System.out.println("El resultado es " + total3+"\n");
+                    }
+                    case 4 -> {
+                        int num7;
+                        int num8;
+                        int total4;
+                        System.out.println("Ingrese el primer número");
+                        num7 = sc.nextInt();
+                        System.out.println("Ingrese el segundo número");
+                        num8 = sc.nextInt();
+                        total4 = num7 / num8;
+                        System.out.println("El resultado es " + total4+"\n");
+                    }
+                    case 5 -> {
+                        double num9;
+                        double num10;
+                        System.out.println("Ingrese el primer número");
+                        num9 = sc.nextInt();
+                        System.out.println("Ingrese el segundo número");
+                        num10 = sc.nextInt();
+                        double respuestaElevado = Math.pow(num9, num10);
+                        System.out.println("El resultado es " + respuestaElevado+"\n");
+                    }
+                    case 6 -> {
+                        double num11;
+                        System.out.println("Ingrese el número al cual desea sacar su raíz cuadrada");
+                        num11 = sc.nextInt();
+                        double resultado = Math.sqrt(num11);
+                        System.out.println("La raíz cuadrada de " + num11 + " es " + resultado+"\n");
+                    }
+                    case 7 -> salir = true;
+                    default -> System.out.println("Solo números entre 1 y 7");
+                }
+            }catch (InputMismatchException e){
+                System.out.println("Debes insertar un número");
+                sc.next();
+            }
         }
     }
 }
