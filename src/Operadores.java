@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 public class Operadores {
     public int suma(int num, int num2){
         int resultado;
