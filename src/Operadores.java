@@ -21,7 +21,7 @@ public class Operadores {
     }
     public int NuemeroElevado(int num, int num2){
         double resultado;
-        resultado = Math.sqrt(num);
+        resultado = Math.pow(num, num2);
         return (int) resultado;
     }
     public int RaizCuadrada(int num){
