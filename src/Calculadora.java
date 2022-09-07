@@ -14,8 +14,8 @@ public class Calculadora {
                 2.- Restar
                 3.- Multiplicar
                 4.- Dividir
-                5.- Potencia (construccion)
-                6.- Raiz cuadrada (construccion)
+                5.- Potencia
+                6.- Raiz cuadrada
                 7.- Salir
                 """;
 
