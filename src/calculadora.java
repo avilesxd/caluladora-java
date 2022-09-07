@@ -27,53 +27,46 @@ public class Calculadora {
                 opcion = opciones.nextInt();
                 System.out.println("\n");
                 switch (opcion) {
-                    case 1:
+                    case 1 -> {
                         System.out.println("Ingrese el 1er numero");
                         num = sc.nextInt();
                         System.out.println("Ingrese el 2do numero");
                         num2 = sc.nextInt();
-                        resultado = data.suma(num,num2);
+                        resultado = data.suma(num, num2);
                         System.out.println("\n");
                         System.out.println("El resultado es " + resultado);
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         System.out.println("Ingrese el 1er numero");
                         num = sc.nextInt();
                         System.out.println("Ingrese el 2do numero");
                         num2 = sc.nextInt();
-                        resultado = data.resta(num,num2);
+                        resultado = data.resta(num, num2);
                         System.out.println("\n");
                         System.out.println("El resultado es " + resultado);
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         System.out.println("Ingrese el 1er numero");
                         num = sc.nextInt();
                         System.out.println("Ingrese el 2do numero");
                         num2 = sc.nextInt();
-                        resultado = data.multiplicacion(num,num2);
+                        resultado = data.multiplicacion(num, num2);
                         System.out.println("\n");
                         System.out.println("El resultado es " + resultado);
-                        break;
-                    case 4:
+                    }
+                    case 4 -> {
                         System.out.println("Ingrese el 1er numero");
                         num = sc.nextInt();
                         System.out.println("Ingrese el 2do numero");
                         num2 = sc.nextInt();
-                        resultado = data.division(num,num2);
+                        resultado = data.division(num, num2);
                         System.out.println("\n");
                         System.out.println("El resultado es " + resultado);
-                        break;
-                    case 5:
-                        System.out.println("En construccion");
-                        break;
-                    case 6:
-                        System.out.println("En construccion");
-                        break;
-                    case 7:
-                        salir = true;
-                        break;
-                    default:
-                        System.out.println("Solo números entre 1 y 7");
+                    }
+                    case 5 -> System.out.println("En construccion");
+                    case 6 -> System.out.println("En construccion");
+                    case 7 -> salir = true;
+                    default -> System.out.println("Solo números entre 1 y 7");
                 }
             }catch (Exception e){
                 System.out.println("Debe insertar un número");
