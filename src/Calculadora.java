@@ -82,7 +82,6 @@ public class Calculadora {
                 }
             }catch (Exception e){
                 System.out.println("Debe insertar un número");
-                sc.next();
             }
         }
     }
