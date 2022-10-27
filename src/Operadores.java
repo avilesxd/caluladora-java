@@ -19,7 +19,7 @@ public class Operadores {
         resultado = num / num2;
         return resultado;
     }
-    public int NuemeroElevado(int num, int num2){
+    public int NumeroElevado(int num, int num2){
         double resultado;
         resultado = Math.pow(num, num2);
         return (int) resultado;
