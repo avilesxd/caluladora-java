@@ -68,7 +68,7 @@ public class Calculadora {
                         num = sc.nextInt();
                         System.out.println("Ingrese el numero exponente");
                         num2 = sc.nextInt();
-                        resultado = data.NuemeroElevado(num, num2);
+                        resultado = data.NumeroElevado(num, num2);
                         System.out.println("El resultado es " + resultado);
                     }
                     case 6 -> {
